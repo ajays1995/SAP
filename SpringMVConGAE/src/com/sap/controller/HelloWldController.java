@@ -19,7 +19,9 @@ public class HelloWldController implements Controller {
     public ModelAndView handleRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
 
-        logger.info("Returning hello view");
+        logger.info("Returning hello view test it again again");
+		
+		logger.info("Checked Out and again committing from source tree");
 
         return new ModelAndView("hello.jsp");
     }
