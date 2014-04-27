@@ -4,6 +4,10 @@ import java.io.Serializable;
 
 public class UserRegistrationInput implements Serializable
 {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	String firstName;
 	public String getFirstName() {
 		return firstName;
@@ -33,6 +37,14 @@ public class UserRegistrationInput implements Serializable
 	String email;
 	String phoneNumber;
 	String password;
+	char gender;
+	
+	public char getGender() {
+		return gender;
+	}
+	public void setGender(char gender) {
+		this.gender = gender;
+	}
 	public String getPassword() {
 		return password;
 	}

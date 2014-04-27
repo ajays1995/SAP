@@ -4,8 +4,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity@Table(name="USER") 
@@ -16,16 +14,16 @@ public class User {
 	@Column(name="USER_ID")     
 	private Long userId;    
 	
-	@Column(name="FIRST_N")     
+	@Column(name="FIRST_N",length=25)     
 	private String firstname;           
 	
-	@Column(name="LAST_N")     
+	@Column(name="LAST_N",length=25)     
 	private String lastname;           
 	
-	@Column(name="EMAIL_ID")     
+	@Column(name="EMAIL_ID",length=100)  
 	private String emailId;           
 	
-	@Column(name="PHONE_NO")     
+	@Column(name="PHONE_NO",length=10)     
 	private String phoneNo;   
 	
 	@Column(name="USER_TYPE")     
@@ -34,20 +32,41 @@ public class User {
 	@Column(name="RIDE_ID")     
 	private Integer rideId;  
 	
-	@Column(name="PASSWORD")
+	@Column(name="PASSWORD",length=32)
 	private String password;
 	
-	@Column(name="ACTIVE")
-	private char active ='N';
+	@Column(name="ACCOUNT_VERIFIED")
+	private char accountVerified ='N';
+	
+	@Column(name="GENDER")
+	private char gender;
+	
+	private String userName;
 	    
 	//private Ride ride;    
 	
-	public char getActive() {
-		return active;
+	public String getUserName() {
+		return userName;
 	}
 
-	public void setActive(char active) {
-		this.active = active;
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
+
+	public char getGender() {
+		return gender;
+	}
+
+	public void setGender(char gender) {
+		this.gender = gender;
+	}
+
+	public char getAccountVerified() {
+		return accountVerified;
+	}
+
+	public void setAccountVerified(char accountVerified) {
+		this.accountVerified = accountVerified;
 	}
 
 	public String getPassword() {

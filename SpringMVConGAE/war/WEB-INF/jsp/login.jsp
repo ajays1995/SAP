@@ -5,16 +5,23 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <html>
 <head>
-<title><spring:message code="user.registration"/></title>
+<title><spring:message code="login"/></title>
 </head>
 <body>
-<h2><spring:message code="user.registration"/></h2>
 <table>
-<form:form method="post" action="Login.html">
+<form:form method="post" action="LoginAction.html">
 <tr>
-<td><spring:message code="user.registration.request"/>
+<td><spring:message code="user.name"/></td>
+<td><form:input path="userName"/></td>
+</tr>
+<tr>
+<td><spring:message code="password"/></td>
+<td><form:password path="password"/></td>
+</tr>
+<tr>
+<td colspan="2">
+<input type="submit" value="<spring:message code="login"/>"/>
 </td>
-<td><input type="submit" value="<spring:message code="login"/>"/></td>
 </tr>
 </form:form>
 </table>
